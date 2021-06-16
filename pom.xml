@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>mulesoft-cicd-sample3</artifactId>
+	<artifactId>mulesoft-cicd-sample31111</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule-application</packaging>
 
-	<name>mulesoft-cicd-sample3</name>
+	<name>mulesoft-cicd-sample31111</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,7 +30,7 @@
             <muleVersion>4.3.0</muleVersion>
             <username>sudeshgagare8</username>
             <password>Sudesh@1</password>
-            <applicationName>mulesoft-cicd-sample3</applicationName>
+            <applicationName>mulesoft-cicd-sample31111</applicationName>
             <environment>Sandbox</environment>
             <workerType>MICRO</workerType>
             <objectStoreV2>true</objectStoreV2>
