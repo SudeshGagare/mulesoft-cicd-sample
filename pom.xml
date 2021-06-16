@@ -3,17 +3,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>mulesoft-cicd-sample1</artifactId>
+	<artifactId>mulesoft-cicd-sample2</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule-application</packaging>
 
-	<name>mulesoft-cicd-sample1</name>
+	<name>mulesoft-cicd-sample2</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.3.0-20210322</app.runtime>
+		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
 	</properties>
 
@@ -27,10 +27,10 @@
     <configuration>
         <cloudHubDeployment>
             <uri>https://anypoint.mulesoft.com</uri>
-            <muleVersion>4.3.0-20210322</muleVersion>
+            <muleVersion>4.3.0</muleVersion>
             <username>sudeshgagare8</username>
             <password>Sudesh@1</password>
-            <applicationName>mulesoft-cicd-sample1</applicationName>
+            <applicationName>mulesoft-cicd-sample2</applicationName>
             <environment>Sandbox</environment>
             <workerType>MICRO</workerType>
             <objectStoreV2>true</objectStoreV2>
