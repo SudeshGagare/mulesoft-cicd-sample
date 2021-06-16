@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>sample-app-1</artifactId>
+	<artifactId>mulesoft-cicd-sample1</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule-application</packaging>
 
-	<name>sample-app-1</name>
+	<name>mulesoft-cicd-sample1</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,15 +22,15 @@
 		<plugin>
     <groupId>org.mule.tools.maven</groupId>
     <artifactId>mule-maven-plugin</artifactId>
-    <version>3.3.5</version>
+    <version>3.4.2</version>
     <extensions>true</extensions>
     <configuration>
         <cloudHubDeployment>
             <uri>https://anypoint.mulesoft.com</uri>
-            <muleVersion>4.3.0</muleVersion>
+            <muleVersion>4.3.0-20210322</muleVersion>
             <username>sudeshgagare8</username>
             <password>Sudesh@1</password>
-            <applicationName>sample-app-1</applicationName>
+            <applicationName>mulesoft-cicd-sample1</applicationName>
             <environment>Sandbox</environment>
             <workerType>MICRO</workerType>
             <objectStoreV2>true</objectStoreV2>
@@ -65,7 +65,7 @@
 
 	<repositories>
           <repository>
-            <id>anypoint-exchange-v2</id>
+            <id>anypoint-exchange</id>
             <name>Anypoint Exchange</name>
             <url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
             <layout>default</layout>
