@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="b32a9550-7196-4778-be7e-a2302c599450" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="sample-app-1Flow" doc:id="8f81f961-f602-449a-99da-99a283f45eee" >
+		<http:listener doc:id="c5a3cee0-1a9f-4cf1-a4b1-1034bd0ead86" config-ref="HTTP_Listener_config" path="/test1"/>
+		<logger level="INFO" doc:name="Logger" doc:id="2f6373d7-cf16-4609-ae03-78283c37ee67" message="#['Flow is Starting']"/>
+		<ee:transform doc:name="Transform Message" doc:id="8151694e-fda6-42a5-8b32-e4df3cd91319" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"Message": "Success"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="4b79d840-d43f-4f13-bc6b-57b676ad437a" message="#[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="4f6bcb06-6258-4384-bae3-9bcb2510c61d" message="#['Flow is Ending']"/>
+	</flow>
+</mule>
